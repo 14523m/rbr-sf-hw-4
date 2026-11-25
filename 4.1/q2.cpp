@@ -9,7 +9,7 @@
  * @copyright Copyright (c) 2026 Red Bird Racing
  *
  * ====== Trainee Information ======
- * @author Trainee Name: [Your Name]
+ * @author Trainee Name: Saveerapong (Guitar) Maneeruttanaporn
  * @version
  * @date
  *
@@ -35,17 +35,17 @@ int main()
     int a = 3;
     int delta = 0;
     bool repeat = true;
-    while (repeat = true)
+    while (repeat == true)
     {
         cin >> inp;
 
         if (inp == -1)
         {
-            repeat == false;
+            repeat = false;
         }
         else
         {
-            int delta = inp - a;
+            delta = inp - a;
             cout << "Delta: " << delta << ". Enter -1 to exit.\n";
         }
     }
@@ -58,9 +58,25 @@ int main()
 Warning 1: while (repeat = true)
 HOMEWORK TODO
 
+It is currently an assignment operator so it is trying
+to assign the value of "true" to "repeat", but the while loop needs at least
+a boolean to understand whether or not it should continue looping, so
+we should change it to an equality comparison operator that compares the value of
+"true" to "repeat" and returns a boolean instead.
+
+
 Warning 2: repeat == false;
 HOMEWORK TODO
 
+It is warning that we are not using the result of the comparison, because
+this just returns a boolean of whether or not repeat is equal to false, but our 
+true intent is to assign the value of "false" to "repeat".
+
+
 Warning 3: int delta = inp - a;
 HOMEWORK TODO
+
+putting an int in front of delta is like declaring a new variable inside that scope,
+which is destroyed and rebuilt in every loop, so the outside delta is never updated.
+
 */
