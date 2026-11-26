@@ -1,5 +1,5 @@
-/*
- * @file board.h
+/**
+ * @file main.cpp
  * @author Saveerapong (Guitar)
  * @brief code for LED to blink 
  * and buttons to control cycle time and duty cycle of blinking idk
